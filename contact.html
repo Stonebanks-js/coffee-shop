@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="assets/motion/motion.css">
 <link rel="stylesheet" href="assets/layout/layout.css">
 <link rel="stylesheet" href="assets/icons/icon.css">
+<link rel="stylesheet" href="assets/site.css">
 <style>
 :root {
   --p-bg: #f7f3ec; --p-surface: #ede6da; --p-ink: #2e2219; --p-muted: #6b5a49;
@@ -31,6 +32,7 @@
 <!-- page CSS: the picture groups the kit does not size, and one tablet rule a section -->
 <style>
   #message .form { display: grid; gap: var(--s-4); align-content: start; }
+  @media (min-width: 1024px) { #message .form { align-content: center; } }
   #message .form .field--full { grid-column: 1 / -1; }
   @media (min-width: 1024px) { #message .form { padding: var(--s-6); } }
   @media (min-width: 1024px) and (max-width: 1279px) { #visit .visit__cols { grid-template-columns: minmax(0, 1fr); } }
@@ -86,7 +88,7 @@
       <div class="section-head">
         <h2 id="visit-h">Visit</h2>
       </div>
-      <div class="grid grid--top">
+      <div class="grid grid--top fill-row">
         <div class="visit visit--card span-6">
           <div class="visit__head"><p class="t-small" data-open-now></p></div>
           <div class="visit__cols">
@@ -120,7 +122,7 @@
           <p>Bookings for six or more, allergens, lost property.</p>
         </div>
       </div>
-      <div class="grid grid--top">
+      <div class="grid grid--top fill-row">
         <form class="form visit--card span-6" method="post" action="mailto:hello@fernrow.example" enctype="text/plain" novalidate>
           <div class="field field--full">
             <label for="f-name">Your name</label>
@@ -177,6 +179,7 @@
         </div>
         <a class="credits" href="credits.html">Photographs via Wikimedia Commons</a>
       </div>
+      <p class="footer__name" aria-hidden="true">Fernrow</p>
     </div>
   </div>
 </footer>

@@ -1,0 +1,90 @@
+/* site.css — Fernrow's own layer over the design system.
+   Loaded after system.css, ui/cards.css, motion/motion.css and layout/layout.css.
+   It does three things: tightens the page rhythm, gives the hero and the headings
+   more presence, and makes every picture row take the height its section leaves,
+   so no screen ends on dead space. */
+
+/* ---------------------------------------------------------------- rhythm
+   The sections keep one or two screens each; the edges just hold less air. */
+@media (min-width: 1024px) {
+  :root { --padt: 96px; --padb: 64px; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  :root { --padt: 88px; --padb: 56px; }
+}
+
+/* ---------------------------------------------------------------- type
+   A little more weight in the two heading sizes; the scale and its steps hold. */
+:root[data-type="place"] {
+  --t-h2: clamp(26px, .952vw + 22.3px, 36px);
+}
+
+/* ---------------------------------------------------------------- the place hero
+   The photograph takes more of the first screen and the words sit closer under it. */
+.hero--place, :root[data-type="place"] .hero--photo { --photo: min(560px, 60svh); --hgap: 32px; }
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hero--place, :root[data-type="place"] .hero--photo { --photo: min(62vw, 50svh); }
+}
+@media (min-width: 640px) and (max-width: 1023px) and (orientation: portrait) {
+  .hero--place, :root[data-type="place"] .hero--photo { --photo: min(84vw, 60svh); }
+}
+@media (max-width: 639px) {
+  .hero--place, :root[data-type="place"] .hero--photo { --photo: 82vw; }
+}
+
+/* ---------------------------------------------------------------- the type moment
+   The address set large under the visit heading. It sits inside .section-head, whose
+   own paragraph rule would otherwise set it at lead size. */
+.section-head > p.type-moment {
+  margin: var(--s-4) 0 0;
+  max-width: none;
+  font: var(--display-weight) clamp(40px, 6.6vw, 104px)/1.02 var(--font-display);
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.section-head > p.type-moment a { display: block; color: inherit; text-decoration: none; }
+.section-head:has(> .type-moment) { max-width: none; }
+
+/* ---------------------------------------------------------------- picture rows that fill
+   .fill-row takes what the heading leaves of the screen, and its pictures and panels
+   grow into it, so a section never ends on a band of empty ground. Desktop only:
+   below 1024 the sections stack and size to their content. */
+@media (min-width: 1024px) {
+  main > .section > .wrap > .fill-row { flex: 1 1 0; min-height: min-content; align-items: stretch; }
+  .fill-row > .pl-photo { height: 100%; }
+  .fill-row > .pl-photo > img,
+  .fill-row > .pl-photo > picture > img {
+    height: 100%;
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    aspect-ratio: auto;
+  }
+  .fill-row > .visit,
+  .fill-row > .form { height: 100%; }
+  .grid + .fill-row { margin-top: var(--s-5); }
+}
+
+/* the visit panel and the form sit in the middle of the height they are given,
+   so the box does not end on a hole */
+@media (min-width: 1024px) {
+  .fill-row > .visit--card { align-content: center; gap: var(--s-6); }
+  .fill-row > .form.visit--card { align-content: center; }
+}
+
+/* ---------------------------------------------------------------- the name set wide
+   The last line of footer-visit: the café's name across the container, which closes
+   the page and takes the ground the links leave. */
+.footer__name {
+  margin: 0;
+  font: var(--display-weight) min(9.5vw, 136px)/0.86 var(--font-display);
+  letter-spacing: -0.045em;
+  color: var(--ink);
+  text-box: trim-both cap alphabetic;
+}
+@media (max-width: 639px) { .footer__name { font-size: 18vw; } }
+
+/* the closing photograph keeps a real depth now that the name sits under the links */
+@media (min-width: 1024px) {
+  .closing__cta > .close__media { min-height: clamp(180px, 24svh, 280px); }
+}

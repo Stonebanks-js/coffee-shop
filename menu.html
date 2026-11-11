@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="assets/motion/motion.css">
 <link rel="stylesheet" href="assets/layout/layout.css">
 <link rel="stylesheet" href="assets/icons/icon.css">
+<link rel="stylesheet" href="assets/site.css">
 <style>
 :root {
   --p-bg: #f7f3ec; --p-surface: #ede6da; --p-ink: #2e2219; --p-muted: #6b5a49;
@@ -32,6 +33,7 @@
 <style>
   @media (min-width: 1024px) and (max-width: 1279px) {
     #food .grid > .pl-photo, #drinks .grid > .pl-photo { --pl-r: 1.3333 !important; }
+    #drinks .grid + .fill-row { margin-top: var(--s-4); }
   }
   @media (min-width: 640px) and (max-width: 1023px) {
     #food { --h: 2; }
@@ -94,7 +96,7 @@
         </div>
         <a class="link" href="index.html#visit">Find us in Jericho</a>
       </div>
-      <div class="grid grid--top">
+      <div class="grid grid--top fill-row">
         <div class="span-3">
           <p class="t-label">Breakfast</p>
           <ul class="rows">
@@ -126,7 +128,6 @@
       <div class="section-head section-head--row">
         <div>
           <h2 id="drinks-h">Drinks and desserts</h2>
-          <p>One filter and one espresso at a time, and the morning's baking.</p>
         </div>
         <a class="link" href="about.html">Read our story</a>
       </div>
@@ -158,6 +159,8 @@
             <li><span class="rows__name">Lemon drizzle</span><span class="rows__value">&pound;3.80</span></li>
           </ul>
         </div>
+      </div>
+      <div class="grid grid--top fill-row">
         <figure class="pl-photo span-3" style="--pl-r: 1; --pos: 40% 55%"><img src="assets/img/photo-m201752739.webp" srcset="assets/img/photo-m201752739-360.webp 360w, assets/img/photo-m201752739-500.webp 500w, assets/img/photo-m201752739-960.webp 960w, assets/img/photo-m201752739.webp 1280w" sizes="(max-width: 639px) 50vw, (max-width: 1023px) 100vw, 40vw" width="1280" height="1910" alt="Milk steamed into a red pitcher at the machine, hands only" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style=""></figure>
         <figure class="pl-photo span-3" style="--pl-r: 1; --pos: 60% 70%"><img src="assets/img/photo-m61714648-960.webp" srcset="assets/img/photo-m61714648-360.webp 360w, assets/img/photo-m61714648-500.webp 500w, assets/img/photo-m61714648-960.webp 960w" sizes="(max-width: 639px) 50vw, (max-width: 1023px) 100vw, 40vw" width="960" height="1433" alt="Espresso poured from a small jug into a white cup on a worn wooden bar" loading="lazy" decoding="async" data-source="library-057" data-subject="hands" style=""></figure>
         <figure class="pl-photo span-3" style="--pl-r: 1; --pos: 50% 50%"><img src="assets/img/photo-m147143894-1200.webp" srcset="assets/img/photo-m147143894-360.webp 360w, assets/img/photo-m147143894-500.webp 500w, assets/img/photo-m147143894-960.webp 960w, assets/img/photo-m147143894-1200.webp 1200w" sizes="(max-width: 639px) 50vw, (max-width: 1023px) 100vw, 40vw" width="1200" height="800" alt="A steel sample trier pulled from a coffee roaster's drum, holding pale green beans mid-roast" loading="lazy" decoding="async" data-source="library-057" data-subject="roast" style=""></figure>
@@ -199,6 +202,7 @@
         </div>
         <a class="credits" href="credits.html">Photographs via Wikimedia Commons</a>
       </div>
+      <p class="footer__name" aria-hidden="true">Fernrow</p>
     </div>
   </div>
 </footer>
