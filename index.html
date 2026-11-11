@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en" data-type="place" data-radius="soft" data-buttons="solid" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fernrow: a café in Jericho, Oxford</title>
+<meta name="description" content="A neighbourhood café in Jericho, Oxford. Breakfast from 7:30, lunch from 11:30, coffee all day.">
+<meta name="site-kind" content="other">
+<meta name="page-type" content="place">
+<meta name="page-kind" content="place">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #f7f3ec; --p-surface: #ede6da; --p-ink: #2e2219; --p-muted: #6b5a49;
+  --p-accent: #3d6b45; --p-accent-ink: #f7f3ec; --p-action: #3d6b45; --p-action-ink: #f7f3ec;
+  --p-inv-bg: #2e2219; --p-inv-surface: #3a2e25; --p-inv-ink: #f7f3ec; --p-inv-muted: #a59c94;
+  --p-inv-accent: #f7f3ec; --p-inv-accent-ink: #2e2219; --p-inv-action: #f7f3ec; --p-inv-action-ink: #2e2219;
+  --font-display: "Nunito", system-ui, sans-serif;
+  --font-text: "Nunito", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.02em;
+}
+</style>
+<!-- page CSS: the type moment and the picture wall only (the two visuals the kit does not size),
+     plus one tablet rule a section -->
+<style>
+  .type-moment { margin: var(--s-4) 0 0; font: var(--display-weight) clamp(48px, 7vw, 104px)/1.02 var(--font-display); letter-spacing: -0.03em; }
+  .section-head:has(> .type-moment) { max-width: none; }
+  .type-moment a { display: block; color: inherit; text-decoration: none; }
+  #place .wall { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; }
+  #place .wall > a { display: block; overflow: clip; }
+  #place .wall img { display: block; width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    #visit .visit__cols { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    #popular .grid > * { grid-column: auto / span 6; }
+    #popular .grid > .pl-photo { --pl-r: 1.3333 !important; }
+    #popular .grid { row-gap: var(--s-7); }
+    #place .wall img { aspect-ratio: 4 / 5; }
+  }
+  @media (max-width: 639px) {
+    #popular .grid > .pl-photo { grid-column: 1 / -1; --pl-r: 1.3333 !important; }
+    #popular .grid { row-gap: var(--s-7); }
+    #place .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #place .wall img { aspect-ratio: 1 / 1; }
+  }
+</style>
+</head>
+<body>
+<!-- type: place
+     deal: hero place (printed, never dealt), nav nav-split (re-dealt from nav-cards: four pages share
+     one bar and the library holds too few distinct cafe frames to fill a photograph panel on every
+     page without repeating them), close close-photo, footer footer-visit, rhythm space,
+     buttons solid, mark petal, offer pair, the place wall, type moment address, rooms not used.
+     moments: none (a place takes no effect, scene or moment).
+     Screens: hero, visit, popular, the place, footer.closing. -->
+
+<header class="nav nav--split">
+  <div class="wrap nav__bar">
+    <a class="sr-only" href="#top">Skip to content</a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item"><a class="nav__link" href="menu.html">Menu</a></div>
+      <div class="nav__item"><a class="nav__link" href="about.html">About</a></div>
+      <div class="nav__item"><a class="nav__link" href="#visit">Visit</a></div>
+      <div class="nav__item"><a class="nav__link" href="contact.html">Contact</a></div>
+    </nav>
+    <a class="nav__logo" href="index.html"><span class="mark" data-mark="petal" aria-hidden="true"></span>Fernrow</a>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="contact.html#message">Send a message</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--place" aria-labelledby="hero-h">
+    <picture class="hero__bg" style="--ly-pos: 45% 60%"><source media="(max-width: 639px)" srcset="assets/img/photo-m61716670-780x584.webp 780w" sizes="100vw"><img src="assets/img/photo-m61716670.webp" srcset="assets/img/photo-m61716670-360.webp 360w, assets/img/photo-m61716670-500.webp 500w, assets/img/photo-m61716670-960.webp 960w, assets/img/photo-m61716670-1280.webp 1280w, assets/img/photo-m61716670.webp 1920w" sizes="100vw" width="1920" height="1280" alt="Two streams of espresso running into a white cup at a dark machine" fetchpriority="high" decoding="async" data-source="library-057" data-subject="bar"></picture>
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__text">
+        <h1 id="hero-h">Coffee and lunch in Jericho, Oxford</h1>
+        <p class="hero__lead">A small neighbourhood café. Breakfast from 7:30, lunch from 11:30.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="contact.html#message">Send a message</a></div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section" id="visit" data-place="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="visit-h">Visit</h2>
+        <p class="type-moment"><a href="https://www.openstreetmap.org/search?query=Jericho%20Oxford">Jericho, Oxford</a></p>
+      </div>
+      <div class="grid grid--top">
+        <div class="visit visit--card span-6">
+          <div class="visit__head"><p class="t-small" data-open-now></p></div>
+          <div class="visit__cols">
+            <div class="visit__col stack-4">
+              <p class="t-body">Step-free at the front door. 34 seats inside.</p>
+              <a class="btn btn--secondary" href="https://www.openstreetmap.org/search?query=Jericho%20Oxford">Get directions</a>
+            </div>
+            <div class="visit__col">
+              <dl class="hours" data-tz="Europe/London">
+                <dt data-days="mon-fri">Monday to Friday</dt><dd>7:30&nbsp;to&nbsp;18:00</dd>
+                <dt data-days="sat,sun">Saturday and Sunday</dt><dd>8:30&nbsp;to&nbsp;17:00</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <figure class="pl-photo pl-photo--end span-6 start-7" style="--pl-r: 1.3333; --pos: 58% 45%"><img src="assets/img/photo-m61713103.webp" srcset="assets/img/photo-m61713103-360.webp 360w, assets/img/photo-m61713103-500.webp 500w, assets/img/photo-m61713103-960.webp 960w, assets/img/photo-m61713103.webp 1280w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 100vw, 40vw" width="1280" height="853" alt="Filter coffee dripping into a glass server on a scale, kettles behind, warm low light" loading="lazy" decoding="async" data-source="library-057" data-subject="bar"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="popular" style="--hm: 2" aria-labelledby="popular-h">
+    <div class="wrap">
+      <div class="section-head section-head--row">
+        <div>
+          <h2 id="popular-h">Breakfast and coffee</h2>
+          <p>What most people order before ten, and what the bar makes all day. Every price is the same to eat in or take away.</p>
+        </div>
+        <a class="link" href="menu.html">See the full menu</a>
+      </div>
+      <div class="grid grid--top">
+        <div class="span-3">
+          <p class="t-label">Breakfast</p>
+          <ul class="rows">
+            <li><span class="rows__name">Sourdough toast</span><span class="rows__value">&pound;4.20</span></li>
+            <li><span class="rows__name">Porridge</span><span class="rows__value">&pound;5.40</span></li>
+            <li><span class="rows__name">Eggs on toast</span><span class="rows__value">&pound;6.80</span></li>
+            <li><span class="rows__name">Bacon roll</span><span class="rows__value">&pound;5.60</span></li>
+            <li><span class="rows__name">Granola</span><span class="rows__value">&pound;5.20</span></li>
+          </ul>
+        </div>
+        <div class="span-3">
+          <p class="t-label">Coffee</p>
+          <ul class="rows">
+            <li><span class="rows__name">Espresso</span><span class="rows__value">&pound;2.40</span></li>
+            <li><span class="rows__name">Flat white</span><span class="rows__value">&pound;3.40</span></li>
+            <li><span class="rows__name">Filter coffee</span><span class="rows__value">&pound;3.10</span></li>
+            <li><span class="rows__name">Pot of tea</span><span class="rows__value">&pound;2.90</span></li>
+            <li><span class="rows__name">Hot chocolate</span><span class="rows__value">&pound;3.60</span></li>
+          </ul>
+        </div>
+        <figure class="pl-photo span-3 start-7" style="--pl-r: .8; --pos: 40% 55%"><img src="assets/img/photo-m201752739.webp" srcset="assets/img/photo-m201752739-360.webp 360w, assets/img/photo-m201752739-500.webp 500w, assets/img/photo-m201752739-960.webp 960w, assets/img/photo-m201752739.webp 1280w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 100vw, 40vw" width="1280" height="1910" alt="Milk steamed into a red pitcher at the machine, hands only" loading="lazy" decoding="async" data-source="library-057" data-subject="bar"></figure>
+        <figure class="pl-photo pl-photo--end span-3 start-10" style="--pl-r: .8; --pos: 60% 70%"><img src="assets/img/photo-m61714648-960.webp" srcset="assets/img/photo-m61714648-360.webp 360w, assets/img/photo-m61714648-500.webp 500w, assets/img/photo-m61714648-960.webp 960w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 100vw, 40vw" width="960" height="1433" alt="Espresso poured from a small jug into a white cup on a worn wooden bar" loading="lazy" decoding="async" data-source="library-057" data-subject="hands"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="place" aria-labelledby="place-h">
+    <div class="wrap">
+      <div class="section-head section-head--row">
+        <div><h2 id="place-h">Inside the café</h2></div>
+        <a class="link" href="about.html">Read our story</a>
+      </div>
+      <div class="wall">
+        <a class="m-zoom" href="about.html"><img src="assets/img/photo-m187311853-1200.webp" srcset="assets/img/photo-m187311853-360.webp 360w, assets/img/photo-m187311853-500.webp 500w, assets/img/photo-m187311853-960.webp 960w, assets/img/photo-m187311853-1200.webp 1200w" sizes="(max-width: 639px) 50vw, 34vw" width="1200" height="800" alt="A barista's hands tamping ground coffee in a portafilter beside an espresso machine" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style="object-position: 58% 50%"></a>
+        <a class="m-zoom" href="about.html"><img src="assets/img/photo-m28989985-1200.webp" srcset="assets/img/photo-m28989985-360.webp 360w, assets/img/photo-m28989985-500.webp 500w, assets/img/photo-m28989985-960.webp 960w, assets/img/photo-m28989985-1200.webp 1200w" sizes="(max-width: 639px) 50vw, 34vw" width="1200" height="857" alt="A hand holding a small white cup under a bottomless portafilter as espresso runs" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style="object-position: 62% 62%"></a>
+        <a class="m-zoom" href="about.html"><img src="assets/img/photo-m61713028.webp" srcset="assets/img/photo-m61713028-360.webp 360w, assets/img/photo-m61713028-500.webp 500w, assets/img/photo-m61713028-960.webp 960w, assets/img/photo-m61713028.webp 1280w" sizes="(max-width: 639px) 50vw, 34vw" width="1280" height="853" alt="Espresso running from a bottomless portafilter at a chrome machine" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style="object-position: 60% 50%"></a>
+        <a class="m-zoom" href="about.html"><img src="assets/img/photo-m61713362.webp" srcset="assets/img/photo-m61713362-360.webp 360w, assets/img/photo-m61713362-500.webp 500w, assets/img/photo-m61713362-960.webp 960w, assets/img/photo-m61713362.webp 1280w" sizes="(max-width: 639px) 50vw, 34vw" width="1280" height="853" alt="Milk poured into a latte in a white cup held in one hand" loading="lazy" decoding="async" data-source="library-057" data-subject="hands" style="object-position: 50% 55%"></a>
+        <a class="m-zoom" href="about.html"><img src="assets/img/photo-m62054123.webp" srcset="assets/img/photo-m62054123-360.webp 360w, assets/img/photo-m62054123-500.webp 500w, assets/img/photo-m62054123-960.webp 960w, assets/img/photo-m62054123.webp 1280w" sizes="(max-width: 639px) 50vw, 34vw" width="1280" height="853" alt="A hand sorting green coffee beans in a wide basket" loading="lazy" decoding="async" data-source="library-057" data-subject="roast" style="object-position: 25% 35%"></a>
+        <a class="m-zoom" href="about.html"><img src="assets/img/photo-m189498721.webp" srcset="assets/img/photo-m189498721-360.webp 360w, assets/img/photo-m189498721-500.webp 500w, assets/img/photo-m189498721-960.webp 960w, assets/img/photo-m189498721.webp 1280w" sizes="(max-width: 639px) 50vw, 34vw" width="1280" height="853" alt="A tray of four coffees carried along a wooden bar" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style="object-position: 45% 60%"></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing footer--visit" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--photo">
+      <div class="section-head--split">
+        <div><h2 id="close-h">Ask us anything</h2><p class="t-lead">We read messages every morning and reply the same day.</p></div>
+        <a class="btn btn--primary" href="contact.html#message">Send a message<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+      <div class="close__media"><img src="assets/img/photo-c141.webp" srcset="assets/img/photo-c141-360.webp 360w, assets/img/photo-c141-500.webp 500w, assets/img/photo-c141-960.webp 960w, assets/img/photo-c141.webp 1280w" sizes="(max-width: 639px) 190vw, 100vw" width="1280" height="853" alt="Milk poured from a steel pitcher into a dark cup of latte art held in two hands" loading="lazy" decoding="async" data-source="library-057" data-subject="hands" style="--pos: 35% 55%"></div>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-6 stack-4">
+          <address class="footer__address">Jericho, Oxford</address>
+          <p><a class="link" href="https://www.openstreetmap.org/search?query=Jericho%20Oxford">Get directions</a></p>
+        </div>
+        <div class="span-6 start-7 stack-4">
+          <h4>Opening hours</h4>
+          <dl class="hours" data-tz="Europe/London">
+            <dt data-days="mon-fri">Monday to Friday</dt><dd>7:30&nbsp;to&nbsp;18:00</dd>
+            <dt data-days="sat,sun">Saturday and Sunday</dt><dd>8:30&nbsp;to&nbsp;17:00</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 Fernrow</span>
+        <div class="socials">
+          <a href="https://www.instagram.com/" aria-label="Instagram"><svg class="ic ic-svg" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a>
+          <a href="https://www.facebook.com/" aria-label="Facebook"><svg class="ic ic-svg" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
+          <a href="https://x.com/" aria-label="X"><svg class="ic ic-svg" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></a>
+        </div>
+        <a class="credits" href="credits.html">Photographs via Wikimedia Commons</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Quick actions">
+  <p class="t-body">Step-free at the front door. 34 seats inside.</p>
+              <a class="btn btn--secondary" href="https://www.openstreetmap.org/search?query=Jericho%20Oxford">Get directions</a>
+  <a class="btn btn--primary" href="contact.html#message">Send a message</a>
+</nav>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+</body>
+</html>

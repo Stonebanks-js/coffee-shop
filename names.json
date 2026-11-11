@@ -1,0 +1,18 @@
+{
+  "brand": "Fernrow",
+  "coined": true,
+  "searched": true,
+  "queries": [
+    {
+      "query": "\"Fernrow\" coffee cafe",
+      "date": "2026-11-11",
+      "result": "No business of this name in the first 10 results. Nearest: Fern Coffee Bar (Glasgow), Fernwood Coffee Company (Victoria BC), Fern Coffee (Auckland), The Fern (Royal Oak MI), Fern Grove, Fern Cafe. None is an exact match."
+    },
+    {
+      "query": "fernrow.com",
+      "date": "2026-11-11",
+      "result": "No cafe or coffee business on that exact name in the first 10 results; results were for Fern Verrow (a biodynamic farm, fernverrow.com), Fernow and Fernhill. No famous person of that exact name."
+    }
+  ],
+  "note": "Fernrow is a placeholder brand name. Replace it, the logo mark and the title tags with the client's real name before the site goes live."
+}
