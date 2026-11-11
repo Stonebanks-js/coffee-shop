@@ -36,9 +36,8 @@
     #drinks .grid + .fill-row { margin-top: var(--s-4); }
   }
   @media (min-width: 640px) and (max-width: 1023px) {
-    #food { --h: 2; }
-    #food .grid > .span-3 { grid-column: auto / span 6; }
-    #food .grid > .pl-photo { grid-column: 1 / -1; --pl-r: 1.3333 !important; }
+    #food .grid > * { grid-column: auto / span 6; }
+    #food .grid > .pl-photo { --pl-r: .8 !important; }
     #drinks { --h: 2; }
     #drinks .grid > .span-4 { grid-column: auto / span 4; }
     #drinks .grid > .pl-photo { grid-column: auto / span 6; --pl-r: .8 !important; }
@@ -78,7 +77,7 @@
 
 <main id="top">
   <section class="hero hero--place" aria-labelledby="hero-h">
-    <picture class="hero__bg" style="--ly-pos: 60% 50%"><img src="assets/img/photo-m61713028.webp" srcset="assets/img/photo-m61713028-360.webp 360w, assets/img/photo-m61713028-500.webp 500w, assets/img/photo-m61713028-960.webp 960w, assets/img/photo-m61713028.webp 1280w" sizes="100vw" width="1280" height="853" alt="Espresso running from a bottomless portafilter at a chrome machine" fetchpriority="high" decoding="async" data-source="library-057" data-subject="bar"></picture>
+    <picture class="hero__bg" style="--ly-pos: 60% 50%"><img src="assets/img/photo-m61713028.webp" srcset="assets/img/photo-m61713028-360.webp 360w, assets/img/photo-m61713028-480.webp 480w, assets/img/photo-m61713028-500.webp 500w, assets/img/photo-m61713028-600.webp 600w, assets/img/photo-m61713028-720.webp 720w, assets/img/photo-m61713028-840.webp 840w, assets/img/photo-m61713028-960.webp 960w, assets/img/photo-m61713028-1120.webp 1120w, assets/img/photo-m61713028.webp 1280w" sizes="100vw" width="1280" height="853" alt="Espresso running from a bottomless portafilter at a chrome machine" fetchpriority="high" decoding="async" data-source="library-057" data-subject="bar"></picture>
     <div class="wrap"><div class="hero-text">
       <div class="hero__text">
         <h1 id="hero-h">Breakfast, lunch and coffee</h1>
@@ -117,8 +116,8 @@
             <li><span class="rows__name">Jacket potato</span><span class="rows__value">&pound;6.20</span></li>
           </ul>
         </div>
-        <figure class="pl-photo span-3 start-7" style="--pl-r: .8; --pos: 58% 50%"><img src="assets/img/photo-m187311853-1200.webp" srcset="assets/img/photo-m187311853-360.webp 360w, assets/img/photo-m187311853-500.webp 500w, assets/img/photo-m187311853-960.webp 960w, assets/img/photo-m187311853-1200.webp 1200w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 100vw, 40vw" width="1200" height="800" alt="A barista's hands tamping ground coffee in a portafilter beside an espresso machine" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style=""></figure>
-        <figure class="pl-photo pl-photo--end span-3 start-10" style="--pl-r: .8; --pos: 62% 62%"><img src="assets/img/photo-m28989985-1200.webp" srcset="assets/img/photo-m28989985-360.webp 360w, assets/img/photo-m28989985-500.webp 500w, assets/img/photo-m28989985-960.webp 960w, assets/img/photo-m28989985-1200.webp 1200w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 100vw, 40vw" width="1200" height="857" alt="A hand holding a small white cup under a bottomless portafilter as espresso runs" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style=""></figure>
+        <figure class="pl-photo pl-portrait span-3 start-7" style="--pl-r: .8; --pos: 40% 55%"><img src="assets/img/photo-m201752739.webp" srcset="assets/img/photo-m201752739-360.webp 360w, assets/img/photo-m201752739-480.webp 480w, assets/img/photo-m201752739-500.webp 500w, assets/img/photo-m201752739-600.webp 600w, assets/img/photo-m201752739-720.webp 720w, assets/img/photo-m201752739-840.webp 840w, assets/img/photo-m201752739-960.webp 960w, assets/img/photo-m201752739-1120.webp 1120w, assets/img/photo-m201752739.webp 1280w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 45vw, 27vw" width="1280" height="1910" alt="Milk steamed into a red pitcher at the machine, hands only" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style=""></figure>
+        <figure class="pl-photo pl-photo--end pl-portrait span-3 start-10" style="--pl-r: .8; --pos: 60% 70%"><img src="assets/img/photo-m61714648-960.webp" srcset="assets/img/photo-m61714648-360.webp 360w, assets/img/photo-m61714648-480.webp 480w, assets/img/photo-m61714648-500.webp 500w, assets/img/photo-m61714648-600.webp 600w, assets/img/photo-m61714648-720.webp 720w, assets/img/photo-m61714648-840.webp 840w, assets/img/photo-m61714648-960.webp 960w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 45vw, 27vw" width="960" height="1433" alt="Espresso poured from a small jug into a white cup on a worn wooden bar" loading="lazy" decoding="async" data-source="library-057" data-subject="hands" style=""></figure>
       </div>
     </div>
   </section>
@@ -161,10 +160,10 @@
         </div>
       </div>
       <div class="grid grid--top fill-row">
-        <figure class="pl-photo span-3" style="--pl-r: 1; --pos: 40% 55%"><img src="assets/img/photo-m201752739.webp" srcset="assets/img/photo-m201752739-360.webp 360w, assets/img/photo-m201752739-500.webp 500w, assets/img/photo-m201752739-960.webp 960w, assets/img/photo-m201752739.webp 1280w" sizes="(max-width: 639px) 50vw, (max-width: 1023px) 100vw, 40vw" width="1280" height="1910" alt="Milk steamed into a red pitcher at the machine, hands only" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style=""></figure>
-        <figure class="pl-photo span-3" style="--pl-r: 1; --pos: 60% 70%"><img src="assets/img/photo-m61714648-960.webp" srcset="assets/img/photo-m61714648-360.webp 360w, assets/img/photo-m61714648-500.webp 500w, assets/img/photo-m61714648-960.webp 960w" sizes="(max-width: 639px) 50vw, (max-width: 1023px) 100vw, 40vw" width="960" height="1433" alt="Espresso poured from a small jug into a white cup on a worn wooden bar" loading="lazy" decoding="async" data-source="library-057" data-subject="hands" style=""></figure>
-        <figure class="pl-photo span-3" style="--pl-r: 1; --pos: 50% 50%"><img src="assets/img/photo-m147143894-1200.webp" srcset="assets/img/photo-m147143894-360.webp 360w, assets/img/photo-m147143894-500.webp 500w, assets/img/photo-m147143894-960.webp 960w, assets/img/photo-m147143894-1200.webp 1200w" sizes="(max-width: 639px) 50vw, (max-width: 1023px) 100vw, 40vw" width="1200" height="800" alt="A steel sample trier pulled from a coffee roaster's drum, holding pale green beans mid-roast" loading="lazy" decoding="async" data-source="library-057" data-subject="roast" style=""></figure>
-        <figure class="pl-photo pl-photo--end span-3" style="--pl-r: 1; --pos: 45% 50%"><img src="assets/img/photo-m147143898-1200.webp" srcset="assets/img/photo-m147143898-360.webp 360w, assets/img/photo-m147143898-500.webp 500w, assets/img/photo-m147143898-960.webp 960w, assets/img/photo-m147143898-1200.webp 1200w" sizes="(max-width: 639px) 50vw, (max-width: 1023px) 100vw, 40vw" width="1200" height="800" alt="A steel sample trier holding a few freshly roasted beans, the drum blurred behind" loading="lazy" decoding="async" data-source="library-057" data-subject="roast" style=""></figure>
+        <figure class="pl-photo span-3" style="--pl-r: 1; --pos: 58% 50%"><img src="assets/img/photo-m187311853-1200.webp" srcset="assets/img/photo-m187311853-360.webp 360w, assets/img/photo-m187311853-480.webp 480w, assets/img/photo-m187311853-500.webp 500w, assets/img/photo-m187311853-600.webp 600w, assets/img/photo-m187311853-720.webp 720w, assets/img/photo-m187311853-840.webp 840w, assets/img/photo-m187311853-960.webp 960w, assets/img/photo-m187311853-1120.webp 1120w, assets/img/photo-m187311853-1200.webp 1200w" sizes="(max-width: 639px) 80vw, (max-width: 1023px) 80vw, 37vw" width="1200" height="800" alt="A barista's hands tamping ground coffee in a portafilter beside an espresso machine" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style=""></figure>
+        <figure class="pl-photo span-3" style="--pl-r: 1; --pos: 62% 62%"><img src="assets/img/photo-m28989985-1200.webp" srcset="assets/img/photo-m28989985-360.webp 360w, assets/img/photo-m28989985-480.webp 480w, assets/img/photo-m28989985-500.webp 500w, assets/img/photo-m28989985-600.webp 600w, assets/img/photo-m28989985-720.webp 720w, assets/img/photo-m28989985-840.webp 840w, assets/img/photo-m28989985-960.webp 960w, assets/img/photo-m28989985-1120.webp 1120w, assets/img/photo-m28989985-1200.webp 1200w" sizes="(max-width: 639px) 80vw, (max-width: 1023px) 80vw, 37vw" width="1200" height="857" alt="A hand holding a small white cup under a bottomless portafilter as espresso runs" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style=""></figure>
+        <figure class="pl-photo span-3" style="--pl-r: 1; --pos: 50% 50%"><img src="assets/img/photo-m147143894-1200.webp" srcset="assets/img/photo-m147143894-360.webp 360w, assets/img/photo-m147143894-480.webp 480w, assets/img/photo-m147143894-500.webp 500w, assets/img/photo-m147143894-600.webp 600w, assets/img/photo-m147143894-720.webp 720w, assets/img/photo-m147143894-840.webp 840w, assets/img/photo-m147143894-960.webp 960w, assets/img/photo-m147143894-1120.webp 1120w, assets/img/photo-m147143894-1200.webp 1200w" sizes="(max-width: 639px) 80vw, (max-width: 1023px) 80vw, 37vw" width="1200" height="800" alt="A steel sample trier pulled from a coffee roaster's drum, holding pale green beans mid-roast" loading="lazy" decoding="async" data-source="library-057" data-subject="roast" style=""></figure>
+        <figure class="pl-photo pl-photo--end span-3" style="--pl-r: 1; --pos: 45% 50%"><img src="assets/img/photo-m147143898-1200.webp" srcset="assets/img/photo-m147143898-360.webp 360w, assets/img/photo-m147143898-480.webp 480w, assets/img/photo-m147143898-500.webp 500w, assets/img/photo-m147143898-600.webp 600w, assets/img/photo-m147143898-720.webp 720w, assets/img/photo-m147143898-840.webp 840w, assets/img/photo-m147143898-960.webp 960w, assets/img/photo-m147143898-1120.webp 1120w, assets/img/photo-m147143898-1200.webp 1200w" sizes="(max-width: 639px) 80vw, (max-width: 1023px) 80vw, 37vw" width="1200" height="800" alt="A steel sample trier holding a few freshly roasted beans, the drum blurred behind" loading="lazy" decoding="async" data-source="library-057" data-subject="roast" style=""></figure>
       </div>
     </div>
   </section>
@@ -177,7 +176,7 @@
         <div><h2 id="close-h">Ask about anything on the menu</h2><p class="t-lead">Allergen lists are at the counter, and we answer messages the same day.</p></div>
         <a class="btn btn--primary" href="contact.html#message">Send a message<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
       </div>
-      <div class="close__media"><img src="assets/img/photo-m61713103.webp" srcset="assets/img/photo-m61713103-360.webp 360w, assets/img/photo-m61713103-500.webp 500w, assets/img/photo-m61713103-960.webp 960w, assets/img/photo-m61713103.webp 1280w" sizes="(max-width: 639px) 190vw, 100vw" width="1280" height="853" alt="Filter coffee dripping into a glass server on a scale, kettles behind, warm low light" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style="--pos: 58% 45%"></div>
+      <div class="close__media"><img src="assets/img/photo-m61713103.webp" srcset="assets/img/photo-m61713103-360.webp 360w, assets/img/photo-m61713103-480.webp 480w, assets/img/photo-m61713103-500.webp 500w, assets/img/photo-m61713103-600.webp 600w, assets/img/photo-m61713103-720.webp 720w, assets/img/photo-m61713103-840.webp 840w, assets/img/photo-m61713103-960.webp 960w, assets/img/photo-m61713103-1120.webp 1120w, assets/img/photo-m61713103.webp 1280w" sizes="(max-width: 639px) 170vw, 85vw" width="1280" height="853" alt="Filter coffee dripping into a glass server on a scale, kettles behind, warm low light" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style="--pos: 58% 45%"></div>
     </div>
     <div class="closing__links">
       <div class="grid">
@@ -202,7 +201,6 @@
         </div>
         <a class="credits" href="credits.html">Photographs via Wikimedia Commons</a>
       </div>
-      <p class="footer__name" aria-hidden="true">Fernrow</p>
     </div>
   </div>
 </footer>

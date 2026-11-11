@@ -38,12 +38,15 @@
   @media (min-width: 1024px) and (max-width: 1279px) { #visit .visit__cols { grid-template-columns: minmax(0, 1fr); } }
   @media (min-width: 1024px) and (max-width: 1279px) { #message .form { padding: var(--s-4); gap: var(--s-2); } }
   @media (min-width: 640px) and (max-width: 1023px) {
-    #message { --h: 2; }
+    #message .form { background: var(--p-surface); padding: var(--s-6); }
+    #message .grid > * { grid-column: auto / span 6; }
     #message .pl-photo { --pl-r: .8 !important; }
     #message .grid { row-gap: var(--s-7); }
   }
   @media (max-width: 639px) {
     #message .grid { row-gap: var(--s-7); }
+    #visit .visit__col:first-child > .t-label { display: none; }
+    #visit .pl-photo { --pl-r: 1.5 !important; }
   }
 </style>
 </head>
@@ -74,7 +77,7 @@
 
 <main id="top">
   <section class="hero hero--place" aria-labelledby="hero-h">
-    <picture class="hero__bg" style="--ly-pos: 45% 60%"><img src="assets/img/photo-m189498721.webp" srcset="assets/img/photo-m189498721-360.webp 360w, assets/img/photo-m189498721-500.webp 500w, assets/img/photo-m189498721-960.webp 960w, assets/img/photo-m189498721.webp 1280w" sizes="100vw" width="1280" height="853" alt="A tray of four coffees carried along a wooden bar" fetchpriority="high" decoding="async" data-source="library-057" data-subject="bar"></picture>
+    <picture class="hero__bg" style="--ly-pos: 45% 60%"><img src="assets/img/photo-m189498721.webp" srcset="assets/img/photo-m189498721-360.webp 360w, assets/img/photo-m189498721-480.webp 480w, assets/img/photo-m189498721-500.webp 500w, assets/img/photo-m189498721-600.webp 600w, assets/img/photo-m189498721-720.webp 720w, assets/img/photo-m189498721-840.webp 840w, assets/img/photo-m189498721-960.webp 960w, assets/img/photo-m189498721-1120.webp 1120w, assets/img/photo-m189498721.webp 1280w" sizes="100vw" width="1280" height="853" alt="A tray of four coffees carried along a wooden bar" fetchpriority="high" decoding="async" data-source="library-057" data-subject="bar"></picture>
     <div class="wrap"><div class="hero-text">
       <div class="hero__text">
         <h1 id="hero-h">Contact the caf&eacute; in Jericho</h1>
@@ -109,7 +112,7 @@
             </div>
           </div>
         </div>
-        <figure class="pl-photo pl-photo--end span-6 start-7" style="--pl-r: 1.3333; --pos: 40% 50%"><img src="assets/img/photo-m147143963.webp" srcset="assets/img/photo-m147143963-360.webp 360w, assets/img/photo-m147143963-500.webp 500w, assets/img/photo-m147143963-960.webp 960w, assets/img/photo-m147143963.webp 1280w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 100vw, 40vw" width="1280" height="901" alt="Freshly roasted beans pouring from the drum into the cooling tray, steam rising" loading="lazy" decoding="async" data-source="library-057" data-subject="roast" style=""></figure>
+        <figure class="pl-photo pl-photo--end span-6 start-7" style="--pl-r: 1.3333; --pos: 40% 50%"><img src="assets/img/photo-m147143963.webp" srcset="assets/img/photo-m147143963-360.webp 360w, assets/img/photo-m147143963-480.webp 480w, assets/img/photo-m147143963-500.webp 500w, assets/img/photo-m147143963-600.webp 600w, assets/img/photo-m147143963-720.webp 720w, assets/img/photo-m147143963-840.webp 840w, assets/img/photo-m147143963-960.webp 960w, assets/img/photo-m147143963-1120.webp 1120w, assets/img/photo-m147143963.webp 1280w" sizes="(max-width: 1023px) 113vw, 62vw" width="1280" height="901" alt="Freshly roasted beans pouring from the drum into the cooling tray, steam rising" loading="lazy" decoding="async" data-source="library-057" data-subject="roast" style=""></figure>
       </div>
     </div>
   </section>
@@ -141,7 +144,7 @@
           </div>
           <p class="t-small muted field--full">We read messages every morning and reply the same working day.</p>
         </form>
-        <figure class="pl-photo pl-photo--end span-6 start-7" style="--pl-r: 1.3333; --pos: 62% 62%"><img src="assets/img/photo-m28989985-1200.webp" srcset="assets/img/photo-m28989985-360.webp 360w, assets/img/photo-m28989985-500.webp 500w, assets/img/photo-m28989985-960.webp 960w, assets/img/photo-m28989985-1200.webp 1200w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 100vw, 40vw" width="1200" height="857" alt="A hand holding a small white cup under a bottomless portafilter as espresso runs" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style=""></figure>
+        <figure class="pl-photo pl-photo--end span-6 start-7" style="--pl-r: 1.3333; --pos: 62% 62%"><img src="assets/img/photo-m28989985-1200.webp" srcset="assets/img/photo-m28989985-360.webp 360w, assets/img/photo-m28989985-480.webp 480w, assets/img/photo-m28989985-500.webp 500w, assets/img/photo-m28989985-600.webp 600w, assets/img/photo-m28989985-720.webp 720w, assets/img/photo-m28989985-840.webp 840w, assets/img/photo-m28989985-960.webp 960w, assets/img/photo-m28989985-1120.webp 1120w, assets/img/photo-m28989985-1200.webp 1200w" sizes="(max-width: 639px) 113vw, (max-width: 1023px) 80vw, 62vw" width="1200" height="857" alt="A hand holding a small white cup under a bottomless portafilter as espresso runs" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style=""></figure>
       </div>
     </div>
   </section>
@@ -154,7 +157,7 @@
         <div><h2 id="close-h">Come in for a coffee</h2><p class="t-lead">Open from 7:30 on weekdays and 8:30 at weekends.</p></div>
         <a class="btn btn--primary" href="contact.html#message">Send a message<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
       </div>
-      <div class="close__media"><img src="assets/img/photo-m61712989.webp" srcset="assets/img/photo-m61712989-360.webp 360w, assets/img/photo-m61712989-500.webp 500w, assets/img/photo-m61712989-960.webp 960w, assets/img/photo-m61712989.webp 1280w" sizes="(max-width: 639px) 190vw, 100vw" width="1280" height="853" alt="Roasted beans turning in a roaster's cooling tray under the stirring arm" loading="lazy" decoding="async" data-source="library-057" data-subject="roast" style="--pos: 30% 50%"></div>
+      <div class="close__media"><img src="assets/img/photo-m61712989.webp" srcset="assets/img/photo-m61712989-360.webp 360w, assets/img/photo-m61712989-480.webp 480w, assets/img/photo-m61712989-500.webp 500w, assets/img/photo-m61712989-600.webp 600w, assets/img/photo-m61712989-720.webp 720w, assets/img/photo-m61712989-840.webp 840w, assets/img/photo-m61712989-960.webp 960w, assets/img/photo-m61712989-1120.webp 1120w, assets/img/photo-m61712989.webp 1280w" sizes="(max-width: 639px) 170vw, 85vw" width="1280" height="853" alt="Roasted beans turning in a roaster's cooling tray under the stirring arm" loading="lazy" decoding="async" data-source="library-057" data-subject="roast" style="--pos: 30% 50%"></div>
     </div>
     <div class="closing__links">
       <div class="grid">
@@ -179,7 +182,6 @@
         </div>
         <a class="credits" href="credits.html">Photographs via Wikimedia Commons</a>
       </div>
-      <p class="footer__name" aria-hidden="true">Fernrow</p>
     </div>
   </div>
 </footer>

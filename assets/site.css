@@ -38,11 +38,19 @@
 .section-head > p.type-moment {
   margin: var(--s-4) 0 0;
   max-width: none;
-  font: var(--display-weight) clamp(40px, 6.6vw, 104px)/1.02 var(--font-display);
+  font: var(--display-weight) clamp(34px, 6.6vw, 104px)/1.02 var(--font-display);
   letter-spacing: -0.03em;
   color: var(--ink);
 }
-.section-head > p.type-moment a { display: block; color: inherit; text-decoration: none; }
+.section-head > p.type-moment a,
+.section-head > p.type-moment .type-moment__link {
+  display: block; color: inherit; background: none; text-decoration: none;
+}
+.section-head > p.type-moment a:is(:hover, :focus-visible) {
+  text-decoration: underline;
+  text-decoration-thickness: 0.035em;
+  text-underline-offset: 0.1em;
+}
 .section-head:has(> .type-moment) { max-width: none; }
 
 /* ---------------------------------------------------------------- picture rows that fill
@@ -51,15 +59,19 @@
    below 1024 the sections stack and size to their content. */
 @media (min-width: 1024px) {
   main > .section > .wrap > .fill-row { flex: 1 1 0; min-height: min-content; align-items: stretch; }
-  .fill-row > .pl-photo { height: 100%; }
+  .fill-row > .pl-photo { height: 100%; display: flex; align-items: flex-end; }
   .fill-row > .pl-photo > img,
   .fill-row > .pl-photo > picture > img {
     height: 100%;
     width: 100%;
     max-width: none;
-    max-height: none;
+    /* never crop a picture taller than 4:5 of its own frame: past that a landscape
+       source has to be blown up to cover the box */
+    max-height: calc(100cqw / 0.8);
     aspect-ratio: auto;
   }
+  /* a frame holding a portrait photograph may crop taller: the source has the pixels for it */
+  .fill-row > .pl-portrait > img { max-height: calc(100cqw / 0.56); }
   .fill-row > .visit,
   .fill-row > .form { height: 100%; }
   .grid + .fill-row { margin-top: var(--s-5); }
@@ -72,19 +84,11 @@
   .fill-row > .form.visit--card { align-content: center; }
 }
 
-/* ---------------------------------------------------------------- the name set wide
-   The last line of footer-visit: the café's name across the container, which closes
-   the page and takes the ground the links leave. */
-.footer__name {
-  margin: 0;
-  font: var(--display-weight) min(9.5vw, 136px)/0.86 var(--font-display);
-  letter-spacing: -0.045em;
-  color: var(--ink);
-  text-box: trim-both cap alphabetic;
-}
-@media (max-width: 639px) { .footer__name { font-size: 18vw; } }
-
 /* the closing photograph keeps a real depth now that the name sits under the links */
 @media (min-width: 1024px) {
-  .closing__cta > .close__media { min-height: clamp(180px, 24svh, 280px); }
+  .closing__cta > .close__media { min-height: clamp(180px, 24svh, 300px); }
+
 }
+
+/* one action on the phone bar runs the container's width */
+.actionbar > .btn:only-child { width: 100%; }
